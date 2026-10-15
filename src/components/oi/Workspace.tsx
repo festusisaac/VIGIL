@@ -1,6 +1,6 @@
 'use client';
 /**
- * OSIRIS OI: the workspace.
+ * VIGIL OI: the workspace.
  *
  * Full screen, OI becomes a command centre in the manner of an analysis
  * platform, with or without a forecast:
@@ -163,7 +163,7 @@ export function Workspace(p: WorkspaceProps) {
                 {s.frame && <span className="flex-shrink-0 text-[var(--gold-primary)]">{KIND_LABEL[s.frame.kind]}</span>}
                 {oi.runId && <span className="flex-shrink-0">Run {oi.runId.slice(0, 6)}</span>}
                 <span className="flex items-center gap-1.5 min-w-0">
-                  <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${s.status === 'running' ? 'animate-osiris-pulse' : ''}`}
+                  <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${s.status === 'running' ? 'animate-vigil-pulse' : ''}`}
                     style={{ background: s.status === 'running' || s.status === 'done' ? T.gold : s.status === 'failed' ? T.red : T.mute, boxShadow: s.status === 'running' ? `0 0 6px ${gold(0.8)}` : undefined }} />
                   <span className="truncate normal-case tracking-[0.02em] text-[11px] font-sans text-[var(--text-secondary)]">{s.status === 'running' ? s.phaseLabel : s.status === 'done' ? 'Forecast complete' : s.status === 'failed' ? (s.message || 'Failed') : 'Stopped'}</span>
                 </span>

@@ -1,6 +1,6 @@
 'use client';
 /**
- * OSIRIS OI Assist: the conversation.
+ * VIGIL OI Assist: the conversation.
  *
  * Talk to OI, typed or spoken, and it works the map for you: it flies there,
  * switches the layers on, finds what is live, marks it, and puts it on screen
@@ -345,7 +345,7 @@ export function AssistView(p: AssistViewProps) {
             {dictation.supported && (
               <button onClick={() => (dictation.listening ? dictation.stop() : dictation.start())} disabled={assist.busy} aria-pressed={dictation.listening}
                 title={dictation.listening ? 'Stop listening' : 'Talk to OI'} aria-label={dictation.listening ? 'Stop listening' : 'Talk to OI'}
-                className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors disabled:opacity-30 ${dictation.listening ? 'text-[var(--alert-red)] bg-[rgba(255,61,61,0.12)] animate-osiris-pulse' : 'text-[var(--text-secondary)] hover:text-[var(--cyan-primary)] hover:bg-[rgba(var(--cyan-rgb),0.08)]'}`}>
+                className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors disabled:opacity-30 ${dictation.listening ? 'text-[var(--alert-red)] bg-[rgba(255,61,61,0.12)] animate-vigil-pulse' : 'text-[var(--text-secondary)] hover:text-[var(--cyan-primary)] hover:bg-[rgba(var(--cyan-rgb),0.08)]'}`}>
                 <Mic className="w-4 h-4" />
               </button>
             )}

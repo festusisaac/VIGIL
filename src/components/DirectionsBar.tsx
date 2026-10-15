@@ -11,7 +11,7 @@ import { loadRecent, rememberPlace, type RecentPlace } from '@/lib/recent-places
 import { PlaceRow } from './places';
 
 /* ═══════════════════════════════════════════════════════════════
-   OSIRIS — Directions
+   VIGIL — Directions
    Turn-by-turn routing over /api/directions (Valhalla + OSRM): a start, any
    stops and a destination on one rail; the fastest route and its
    alternatives, each with the road it takes; the steps; and a hand-off to
@@ -564,7 +564,7 @@ export default function DirectionsBar({ onRoute, onLocate, onClose, center = nul
    * Fill the origin with wherever the operator is.
    *
    * Tries the browser first (precise, but needs permission and a secure
-   * context), then falls back to OSIRIS's existing IP geolocation, which needs
+   * context), then falls back to VIGIL's existing IP geolocation, which needs
    * neither — so this still does something useful when permission is denied.
    */
   const useMyLocation = useCallback(async () => {
@@ -694,7 +694,7 @@ export default function DirectionsBar({ onRoute, onLocate, onClose, center = nul
         {tracking && (
           <span className="flex items-center gap-1.5 h-6 px-2 rounded-full text-[9.5px] font-mono tracking-[0.12em] uppercase text-[var(--gold-light)]"
             style={{ background: 'rgba(var(--gold-rgb),0.1)', boxShadow: 'inset 0 0 0 1px rgba(var(--gold-rgb),0.3)' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold-light)] animate-osiris-pulse" /> Live
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold-light)] animate-vigil-pulse" /> Live
           </span>
         )}
         <IconBtn label={tracking ? 'Stop live tracking' : 'Track my location live'} onClick={toggleTracking} on={tracking}>

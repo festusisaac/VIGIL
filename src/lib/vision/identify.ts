@@ -1,5 +1,5 @@
 /**
- * OSIRIS vision: naming the vehicles in a frame, with the reader's own model.
+ * VIGIL vision: naming the vehicles in a frame, with the reader's own model.
  *
  * The built-in detector says "car" and reads its colour; it cannot tell a
  * Corolla from a Civic, and nothing small enough to run in a browser can from

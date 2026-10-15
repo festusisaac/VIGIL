@@ -42,7 +42,7 @@ function Patch({ sky, children }: { sky?: boolean; children: React.ReactNode }) 
   );
 }
 
-/* The aircraft icon, point for point as OsirisMap rasterises it at 24px. */
+/* The aircraft icon, point for point as VigilMap rasterises it at 24px. */
 const PLANE = [[0, -0.4], [-0.12, 0.1], [-0.4, 0.2], [-0.4, 0.3], [-0.12, 0.15], [0, 0.35], [0.12, 0.15], [0.4, 0.3], [0.4, 0.2], [0.12, 0.1]]
   .map(([x, y]) => `${x * 24},${y * 24}`).join(' ');
 
@@ -190,7 +190,7 @@ function specimens(s: StyleSettings): { title: string; items: Specimen[] }[] {
             <>
               <span className="threat-badge-nominal">Nominal</span>
               <span className="flex items-center gap-1.5 text-[10px] font-mono text-[var(--alert-green)]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--alert-green)] animate-osiris-pulse" />▲ 1.8%
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--alert-green)] animate-vigil-pulse" />▲ 1.8%
               </span>
             </>
           ),

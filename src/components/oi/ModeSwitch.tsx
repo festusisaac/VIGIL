@@ -1,6 +1,6 @@
 'use client';
 /**
- * OSIRIS OI: Forecast or Assist.
+ * VIGIL OI: Forecast or Assist.
  *
  * The two ways to use OI as one compact switch, each in its own colour so it
  * is never in doubt which is showing: Forecast in gold, Assist in blue. Each
@@ -49,7 +49,7 @@ export function ModeSwitch({ id, mode, onMode, forecastLive = false, assistBusy 
             <Icon className="relative w-3.5 h-3.5" />
             <span className="relative">{m.label}</span>
             {working && (
-              <span className="relative w-1.5 h-1.5 rounded-full animate-osiris-pulse" title={m.value === 'forecast' ? 'A forecast is running' : 'OI is replying'}
+              <span className="relative w-1.5 h-1.5 rounded-full animate-vigil-pulse" title={m.value === 'forecast' ? 'A forecast is running' : 'OI is replying'}
                 style={{ background: accent, boxShadow: `0 0 6px ${tint(0.8)}` }} />
             )}
           </button>
